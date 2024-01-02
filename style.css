@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    border: none;
+}
+
+/* Main content styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #9a9e8f;
+    color: #eee;
+    display: flex;
+    justify-content: center;
+    margin: 40px auto;
+    text-align: center;
+}
+
+/* Game board styles */
+.board-dimension {
+    border: 1px solid black;
+    display: block;
+    margin: 20px auto;
+    box-shadow: 2px 1px 3px #333;
+}
+
+/* Game button styles */
+.gameBtn {
+    margin-top: 20px;
+}
+
+.gameBtn button {
+    background: #bac9ca;
+    box-shadow: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: #333;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.startBtn.hide,
+.stopBtn.hide {
+    display: none;
+}
+
+/* Game instructions modal styles */
+.tooltip {
+    position: absolute;
+    bottom: 3.2rem;
+    right: 0.1rem;
+    font-size: 1.2rem;
+    color: #333;
+    visibility: hidden;
+}
+
+.help-btn {
+    width: 50px;
+    height: 50px;
+    background: #eee;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    border: 1px solid #333;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    cursor: pointer;
+    font-family: Verdana, sans-serif;
+}
+
+.help-btn:hover .tooltip {
+    visibility: visible;
+}
+
+.instruction-overlay {
+    background-color: rgb(51, 51, 51, 0.92);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 3;
+}
+
+.instruction-overlay.visible {
+    display: flex;
+}
+
+.instruction-modal {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.instruction-modal p,
+.scoring {
+    width: 90%;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.scoring h3 {
+    text-align: center;
+}
+
+.last-note {
+    text-transform: uppercase;
+    width: 100px;
+    font-weight: 700;
+}
+
+#close-btn {
+    background: #bf0a0a;
+    color: #fff;
+    width: 2rem;
+    height: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    margin: 0;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+/* Game-over modal styles */
+.modal-overlay {
+    background-color: rgba(51, 51, 51, 0.92);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 3;
+}
+
+.modal-overlay.visible {
+    display: flex;
+}
+
+.instruction-modal {
+    background: white;
+    color: #333;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 500px;
+}
+
+.modal {
+    background: white;
+    color: #333;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.modal-btn {
+    background: #333;
+    color: white;
+    font-size: 1rem;
+    width: 8rem;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}

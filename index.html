@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Snake Game</title>
+  </head>
+  <body>
+    <main>
+      <h1>Snake Game</h1>
+
+      <!-- Score board -->
+      <p id="score">Score: 0</p>
+
+      <!-- Game board dimension -->
+      <canvas class="board-dimension" id="snakeCanvas" width="400" height="400">
+        Board dimension
+      </canvas>
+
+      <!-- Game buttons -->
+      <div class="gameBtn">
+        <button class="startBtn" id="start">Start Game</button>
+        <button class="stopBtn" id="stop">Stop Game</button>
+      </div>
+    </main>
+
+    <footer>
+      <!-- Game instructions -->
+      <div class="help-btn">
+        <div class="tooltip">Help</div>
+        ?
+      </div>
+      <div class="instruction-overlay">
+        <div class="instruction-modal">
+          <h2 class="how">How to play the game</h2>
+          <p>
+            This is a simple, fun snake game where the player controls the snake
+            movement, directing it to its food and earning points.
+          </p>
+          <h3 class="input-methods">Input methods</h3>
+          <p>
+            The player can direct the snake to its food using the arrow keys on
+            the keyboard. Use the UP, RIGHT, DOWN and LEFT arrow keys to change
+            the snake's direction within the game field.
+          </p>
+          <div class="scoring">
+            <h3>Scoring</h3>
+            <p>
+              The player gets a point when the snake is successfully directed to
+              its food. However, the game ends when the snake collides with an
+              obstacle such as itself or the walls of the canvas.
+            </p>
+          </div>
+          <div class="last-note">
+            <p>Have fun!</p>
+          </div>
+          <button id="close-btn">x</button>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal-overlay">
+        <div class="modal">
+          <h2>Game over</h2>
+          <p class="score">Total score: <span id="result">0</span></p>
+          <button class="modal-btn">Close</button>
+        </div>
+      </div>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>
